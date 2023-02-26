@@ -1,4 +1,4 @@
-name = "miracle-sprinters-all-allow-sg"
+name = "security-group"
 
 ingress_rules = [
   {
