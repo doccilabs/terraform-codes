@@ -1,6 +1,6 @@
 locals {
   common_tags = {
-    project = "miracle-sprinters"
+    project = "my-project"
     Owner   = "brian"
   }
 }
