@@ -1,11 +1,3 @@
-# Common
-variable "tags" {
-    type = map(string)
-    default = {}
-    description = "VPC tags"
-}
-
-# VPC Variables
 variable "vpc_name" {
   type        = string
   description = "Vpc name"
@@ -24,7 +16,7 @@ variable "cidr_block_ipv4" {
 
 variable "cidr_block_ipv6" {
   type        = string
-  description = "pool에 할당된 cidr 블록 범위 내로 정의하셔야합니다. 일반적으로 56 크기의 cidr을 허용합니다."
+  description = "IPv6 CIDR block to request from an IPAM Pool. Can be set explicitly or derived from IPAM using ipv6_netmask_length"
 }
 
 variable "instance_tenancy" {
