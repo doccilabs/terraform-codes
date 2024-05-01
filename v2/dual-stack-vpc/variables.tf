@@ -1,10 +1,11 @@
+# VPC
 variable "vpc_name" {
   type        = string
   description = "Vpc name"
 }
 
 variable "ipv6_ipam_pool_id" {
-  type = string
+  type        = string
   description = "(Required) ipv6 ipam pool의 id 정보입니다."
 }
 
@@ -23,4 +24,59 @@ variable "instance_tenancy" {
   type        = string
   default     = "default"
   description = "A tenancy option for instances launched into the VPC. Default is default, which ensures that EC2 instances launched in this VPC use the EC2 instance tenancy attribute specified when the EC2 instance is launched. The only other option is dedicated, which ensures that EC2 instances launched in this VPC are run on dedicated tenancy instances regardless of the tenancy attribute specified at launch. This has a dedicated per region fee of $2 per hour, plus an hourly per instance usage fee."
+}
+
+# Subnet
+variable "available_zone_01" {
+  type        = string
+  description = "available zone subnet will be applied"
+}
+
+variable "available_zone_03" {
+  type        = string
+  description = "available zone subnet will be applied"
+}
+
+variable "subnet_cidr_block_01" {
+  type        = string
+  description = "ipv4 cidr_block"
+}
+
+variable "subnet_ipv6_cidr_block_01" {
+  type        = string
+  default     = null
+  description = "ipv6 cidr_block"
+}
+
+variable "subnet_cidr_block_02" {
+  type        = string
+  description = "ipv4 cidr_block"
+}
+
+variable "subnet_ipv6_cidr_block_02" {
+  type        = string
+  default     = null
+  description = "ipv6 cidr_block"
+}
+
+variable "subnet_cidr_block_03" {
+  type        = string
+  description = "ipv4 cidr_block"
+}
+
+variable "subnet_ipv6_cidr_block_03" {
+  type        = string
+  default     = null
+  description = "ipv6 cidr_block"
+}
+
+variable "subnet_cidr_block_04" {
+  type        = string
+  description = "ipv4 cidr_block"
+}
+
+variable "subnet_ipv6_cidr_block_04" {
+  type        = string
+  default     = null
+  description = "ipv6 cidr_block"
 }

@@ -1,8 +1,8 @@
 # Common
 variable "tags" {
-    type = map(string)
-    default = {}
-    description = "VPC tags"
+  type        = map(string)
+  default     = {}
+  description = "VPC tags"
 }
 
 # VPC Variables
@@ -12,7 +12,7 @@ variable "vpc_name" {
 }
 
 variable "ipv6_ipam_pool_id" {
-  type = string
+  type        = string
   description = "(Required) ipv6 ipam pool의 id 정보입니다."
 }
 
